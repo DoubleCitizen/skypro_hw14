@@ -103,8 +103,7 @@ def get_by_genre(genre):
         list_result.append(
             {
                 "title": result[0],
-                "description": result[1],
-                "release_year": result[2]
+                "description": result[1]
             })
     return list_result
 

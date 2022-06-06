@@ -1,10 +1,16 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, render_template
 from utils import *
 
 app = Flask(__name__)
 
 app.config['JSON_SORT_KEYS'] = False
 app.config['JSON_AS_ASCII'] = False
+
+
+@app.route("/")
+def main_page():
+    """ Вьюшка главной страницы """
+    return render_template("main.html")
 
 
 @app.route("/movie/<title>")
